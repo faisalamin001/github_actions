@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# CI/CD with GitHub Actions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my GitHub repository where I'm exploring Continuous Integration (CI) and Continuous Deployment (CD) using GitHub Actions.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository serves as a playground to experiment with automating various aspects of the software development lifecycle, from building and testing to deploying applications.
 
-## Expanding the ESLint configuration
+## Workflows
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### CI Workflow
 
-- Configure the top-level `parserOptions` property like this:
+The [action_1.yml](.github/workflows/ci.yml) workflow is triggered on every push to the `master` branch. It includes basic steps to check out the code, set up Node.js, install dependencies, and build the project.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### PR Created Workflow
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The [action_1.yml](.github/workflows/pr_created.yml) workflow runs when a pull request is opened for the `master` branch. It's a starting point for exploring actions specific to pull request creation.
+
+## How to Use
+
+Feel free to explore the workflows and adapt them to your own projects. Experiment with different actions, customize the workflows, and see how GitHub Actions can streamline your development processes.
+
+## Contributions
+
+If you have suggestions or improvements, please open an issue or submit a pull request. This repository is a collaborative space for learning and sharing knowledge.
+
+Happy coding!
