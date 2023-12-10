@@ -1,0 +1,17 @@
+name: Third Action
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  echo_secret:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Display Secret Value
+        run: echo `My Secret Key is ${{ secrets.MY_SECRET_KEY }}`
