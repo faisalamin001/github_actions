@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Display Secret Value
-        run: echo `My Secret Key is ${{ secrets.MY_SECRET_KEY }}`
+        run: echo "My Secret Key is ${{ secrets.MY_SECRET_KEY }}"
