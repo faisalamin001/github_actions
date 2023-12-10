@@ -15,3 +15,6 @@ jobs:
 
       - name: Display Secret Value
         run: echo "My Secret Key is ${{ secrets.MY_SECRET_KEY }}"
+
+      - name: Display Env Value
+        run: echo "My Env Value is ${{ env.MY_SECRET_KEY }}"
